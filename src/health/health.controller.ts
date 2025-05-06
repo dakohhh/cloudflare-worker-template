@@ -6,7 +6,7 @@ class HealthController {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getHealth(request: IRequest, env: Env, ctx: ExecutionContext) {
     console.log(env.AUTH_TOKEN);
-    return new HttpResponse("Get health check successfully", null, HttpStatus.OK);
+    return new HttpResponse(`Get health check successfully with ${env.AUTH_TOKEN}`, null, HttpStatus.OK);
   }
 }
 
